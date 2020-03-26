@@ -1,0 +1,11 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: datacenter01
+  namespace: baremetal-assets
+spec:
+  type: GitHub
+  pathname: https://github.com/open-cluster-management/demo-bma-gitops.git
+  secretRef:
+    name: my-github-secret
