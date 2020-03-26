@@ -5,9 +5,9 @@
 apiVersion: midas.io/v1alpha1
 kind: BareMetalAsset
 metadata:
-  name: dc01-r3-c3-b2-powerflex390
+  name: dc01r3c3b2-powerflex390
 spec:
   bmc:
     address: 3.3.3.3
-    credentialsName: dc01-r3-c3-r2-powerflex390-bmc-secret-gj8rw
+    credentialsName: dc01r3c3b2-powerflex390-bmc-secret
   bootMACAddress: "00:33:33:22:33:00"

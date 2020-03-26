@@ -18,3 +18,4 @@ metadata:
   name: demo-bma-gitops-configmap
 data:
   path: BareMetalAssets
+  branch: master
