@@ -1,7 +1,11 @@
+# Datacenter: 01
+# Rack: 3
+# Chasis: 1  <<< Changed
+# Blade: 1   <<  Changed
 apiVersion: midas.io/v1alpha1
 kind: BareMetalAsset
 metadata:
-  name: dc01-r3-c3-r2-powerflex390
+  name: dc01-r3-c1-b2-powerflex390
 spec:
   bmc:
     address: 3.3.3.3
