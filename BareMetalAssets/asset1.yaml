@@ -1,7 +1,7 @@
 apiVersion: midas.io/v1alpha1
 kind: BareMetalAsset
 metadata:
-  name: DC01-R3-C3-R2-powerflex-390
+  name: dc01-r3-c3-r2-powerflex390
   namespace: default
 spec:
   bmc:
