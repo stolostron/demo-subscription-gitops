@@ -1,10 +1,10 @@
 apiVersion: midas.io/v1alpha1
 kind: BareMetalAsset
 metadata:
-  name: josh2
+  name: DC01-R3-C3-R2-powerflex-390
   namespace: default
 spec:
   bmc:
     address: 3.3.3.3
     credentialsName: josh2-bmc-secret-gj8rw
-bootMACAddress: "00:33:33:22:33:00"
+  bootMACAddress: "00:33:33:22:33:00"
