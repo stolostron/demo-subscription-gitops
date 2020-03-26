@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   channel: baremetal-assets/datacenter01
-  name: demo-bma-gitops
+  #name: demo-bma-gitops
   placement:
     local: true
   packageFilter:
