@@ -3,11 +3,11 @@ kind: Subscription
 metadata:
   name: ingress-nginx-subscription
   namespace: nginx
-labels:
-  app: nginx-deployment
-annotations:
-  apps.open-cluster-management.io/github-path: blueGreen/nginx
-  apps.open-cluster-management.io/github-branch: master
+  labels:
+    app: nginx-deployment
+  annotations:
+    apps.open-cluster-management.io/github-path: blueGreen/nginx
+    apps.open-cluster-management.io/github-branch: master
 spec:
   channel: demo-gitops/nginx-deployment
   placement:

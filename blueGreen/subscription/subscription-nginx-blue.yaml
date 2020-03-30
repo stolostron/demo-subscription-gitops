@@ -3,11 +3,11 @@ kind: Subscription
 metadata:
   name: blue-nginx-subscription
   namespace: nginx
-annotations:
-  apps.open-cluster-management.io/github-path: blueGreen/nginx
-  apps.open-cluster-management.io/github-branch: blue-nginx
-labels:
-  app: nginx-deployment
+  annotations:
+    apps.open-cluster-management.io/github-path: blueGreen/nginx
+    apps.open-cluster-management.io/github-branch: blue-nginx
+  labels:
+    app: nginx-deployment
 spec:
   channel: demo-gitops/nginx-deployment
   placement:
