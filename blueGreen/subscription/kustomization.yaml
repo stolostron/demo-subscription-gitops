@@ -2,4 +2,7 @@ resources:
 - namespace.yaml
 - secret.yaml
 - channel.yaml
-- subscription.yaml
+- placementrule.yaml
+- subscription-nginx-ingress.yaml
+- subscription-nginx-blue.yaml
+- subscription-nginx-green.yaml

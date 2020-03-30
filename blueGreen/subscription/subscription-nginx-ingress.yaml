@@ -12,3 +12,11 @@ spec:
     placementRef:
       name: nginx-deployment
       kind: PlacementRule
+packageOverrides:
+  packageName: kustomization
+  packageOverrides:
+    value: |
+    resources:
+    - service-blue.yaml
+    - service-green.yaml
+    - ingress.yaml

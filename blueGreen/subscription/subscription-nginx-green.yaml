@@ -12,3 +12,9 @@ spec:
     placementRef:
       name: nginx-deployment
       kind: PlacementRule
+  packageOverrides:
+    packageName: kustomization
+    packageOverrides:
+      value: |
+      resources:
+      - deployment.yaml
