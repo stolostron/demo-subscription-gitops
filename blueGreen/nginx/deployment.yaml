@@ -10,7 +10,7 @@ spec:
   selector:
     matchLabels:
       app: nginx
-      stage: blue
+      stage: green
   template:
     metadata:
       labels:
@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.7.9
+        image: bitnami/nginx:1.7.9
         ports:
-        - containerPort: 80
+        - containerPort: 8080
