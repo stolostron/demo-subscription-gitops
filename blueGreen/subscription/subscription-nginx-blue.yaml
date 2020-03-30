@@ -6,6 +6,8 @@ metadata:
 annotations:
   apps.open-cluster-management.io/github-path: blueGreen/nginx
   apps.open-cluster-management.io/github-branch: nginx-blue
+labels:
+  app: nginx-deployment
 spec:
   channel: demo-gitops/nginx-deployment
   placement:
@@ -13,8 +15,9 @@ spec:
       name: nginx-deployment
       kind: PlacementRule
   packageOverrides:
-    packageName: kustomization
+  - packageName: kustomization
     packageOverrides:
-      value: |
+    - value: |
       resources:
       - deployment.yaml
+

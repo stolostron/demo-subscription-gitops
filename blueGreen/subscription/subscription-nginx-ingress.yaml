@@ -1,8 +1,10 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
 metadata:
-  name: blue-nginx-subscription
+  name: ingress-nginx-subscription
   namespace: nginx
+labels:
+  app: nginx-deployment
 annotations:
   apps.open-cluster-management.io/github-path: blueGreen/nginx
   apps.open-cluster-management.io/github-branch: master
@@ -13,9 +15,9 @@ spec:
       name: nginx-deployment
       kind: PlacementRule
   packageOverrides:
-    packageName: kustomization
+  - packageName: kustomization
     packageOverrides:
-      value: |
+    - value: |-
       resources:
       - service-blue.yaml
       - service-green.yaml

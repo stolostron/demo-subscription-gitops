@@ -1,12 +1,12 @@
-apiVersion: app.ibm.com/v1alpha1
+apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-    name: nginx-deployment
-    namespace: nginx
-    generation: 1
-    labels:
-        purpose: nginx-deployment
+  name: nginx-deployment
+  namespace: nginx
+  generation: 1
+  labels:
+    app: nginx-deployment
 spec:
-    clusterLabels:
-    matchLabels:
-        cloud: Amazon
+  clusterLabels:
+  matchLabels:
+    cloud: Amazon
