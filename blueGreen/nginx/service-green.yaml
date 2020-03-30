@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: green-nginx-service
+spec:
+  selector:
+    app: nginx
+    stage: green 
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80

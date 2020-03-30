@@ -1,0 +1,12 @@
+apiVersion: app.ibm.com/v1alpha1
+kind: PlacementRule
+metadata:
+    name: nginx-deployment
+    namespace: nginx
+    generation: 1
+    labels:
+        purpose: nginx-deployment
+spec:
+    clusterLabels:
+    matchLabels:
+        cloud: Amazon
