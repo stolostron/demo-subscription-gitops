@@ -4,10 +4,10 @@
 ### Activate a subscription (ONLY RUN ONCE)
 1. Create a fork the repository and create two branches.
   a. One branch is Blue and one branch is green
-  b. Modify `blueGreen/subscription/subscription-nginx-blue.yaml`, changing the value for `apps.open-cluster-management.io/github-branch` to your Blue branch
-  c. Modify `blueGreen/subscription/subscription-nginx-green.yaml`, changing the value for `apps.open-cluster-management.io/github-branch` to your Green branch
-  d. Modify `blueGreen/subscription/channel.yaml`, changing the value of `spec.pathname` to that of your fork of this repository
-2. Create the file `blueGreen/subscriptions/secret.yaml`
+  b. Modify `subscription/subscription-nginx-blue.yaml`, changing the value for `apps.open-cluster-management.io/github-branch` to your Blue branch
+  c. Modify `subscription/subscription-nginx-green.yaml`, changing the value for `apps.open-cluster-management.io/github-branch` to your Green branch
+  d. Modify `subscription/channel.yaml`, changing the value of `spec.pathname` to that of your fork of this repository
+2. Create the file `subscriptions/secret.yaml`
 ```yaml
 ---
 apiVersion: v1
@@ -26,9 +26,5 @@ data:
 oc apply -k subscription/
 ```
 ### Using
-- After you have completed the ONE time setup, you will start to see the BMA Objects from the `./bma/BareMetalAssets` folder start appearing in the Bare Metal Asset UI.
-- If you commit a change to your branch or forked repo, those changes will appear in the Bare Metal Asset UI in <60s
-- The namespace used for the Bare Metal Asset Objects is `default`
+- Two namespaces are created `demo-gitops` for the channel and `nginx` for the subscriptions
 
-### Help
-Reach out to `jpacker@redhat.com` or Slack `@jpacker` in coreos.slack.com for help
