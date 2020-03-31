@@ -6,7 +6,9 @@ metadata:
   labels:
     app: nginx-placement
 spec:
-  clusterLabels:
-    matchLabels:
-      cloud: Amazon
+  clusters:
+  - name: gcp1-hive
+  #clusterLabels:
+  #  matchLabels:
+  #    cloud: Google
   #clusterReplicas: 1  #Apply to how many matched clusters, default is ALL
