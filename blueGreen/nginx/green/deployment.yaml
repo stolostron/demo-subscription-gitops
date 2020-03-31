@@ -1,20 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: blue-nginx-deployment
+  name: green-nginx-deployment
   labels:
     app: nginx
-    stage: blue
+    stage: green
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+      stage: green
   template:
     metadata:
       labels:
         app: nginx
-        stage: blue
+        stage: green
     spec:
       containers:
       - name: nginx
-        image: bitnami/nginx:1.14.2
+        image: bitnami/nginx:1.12.2
         ports:
         - containerPort: 8080
