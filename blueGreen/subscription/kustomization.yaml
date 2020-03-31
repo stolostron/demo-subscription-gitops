@@ -5,5 +5,5 @@ resources:
 - placementrule.yaml
 - subscription-nginx-ingress.yaml
 - subscription-nginx-blue.yaml
-#- subscription-nginx-green.yaml
+- subscription-nginx-green.yaml
 - application.yaml
