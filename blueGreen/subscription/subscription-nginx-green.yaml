@@ -15,7 +15,7 @@ spec:
       name: nginx-deployment
       kind: PlacementRule
   packageOverrides:
-  - packageName: blueGreen/nginx/kustomization.yaml
+  - packageName: blueGreen/nginx/green/kustomization.yaml
     packageOverrides:
     - value: |
         resources:
