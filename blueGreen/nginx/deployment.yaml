@@ -10,12 +10,12 @@ spec:
   selector:
     matchLabels:
       app: nginx
-      stage: blue
+      stage: green
   template:
     metadata:
       labels:
         app: nginx
-        stage: blue
+        stage: green
     spec:
       containers:
       - name: nginx
