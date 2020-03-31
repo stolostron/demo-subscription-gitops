@@ -3,7 +3,6 @@ kind: PlacementRule
 metadata:
   name: nginx-deployment
   namespace: nginx
-  generation: 1
   labels:
     app: nginx-deployment
 spec:
