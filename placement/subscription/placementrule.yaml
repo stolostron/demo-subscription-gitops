@@ -1,0 +1,11 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: nginx-placement
+  namespace: nginx
+  labels:
+    app: nginx-placement
+spec:
+  clusterLabels:
+    matchLabels:
+      cloud: Amazon
