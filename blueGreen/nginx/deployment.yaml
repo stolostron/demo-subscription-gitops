@@ -4,7 +4,7 @@ metadata:
   name: green-nginx-deployment
   labels:
     app: nginx
-    stage: green
+    stage: blue
 spec:
   replicas: 3
   selector:
