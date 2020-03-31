@@ -1,2 +1,4 @@
 resources:
-- ingress-dual.yaml
+- ingress.yaml
+- service-blue.yaml
+- service-green.yaml
