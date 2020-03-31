@@ -27,4 +27,14 @@ oc apply -k subscription/
 ```
 ### Using
 - Two namespaces are created `demo-gitops` for the channel and `nginx` for the subscriptions
+- Three subscriptions are created in project `nginx`
+  1. The ingress resource from `master` branch
+  2. The blue deployment and service resource from `blue-nginx` branch
+  3. The green deployment and service resource from `green-nginx` branch
+### One option for applying Blue to Green
+- The default configuration:
+  - `green` as nginx `v1.12.2`
+  - `blue` is nginx `v1.14.2`
+- You can do a pull request and merge the blue version to the green branch by merging the `blue-nginx` branch into the `green-nginx` branch. As this is a replica set, OCP will bring up the new blue pods before taking down the old green pods
+
 
