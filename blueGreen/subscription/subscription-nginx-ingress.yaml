@@ -17,6 +17,6 @@ spec:
   packageOverrides:
   - packageName: kustomization
     packageOverrides:
-    - value: |-
-      resources:
-      - ingress.yaml
+    - value: |
+        resources:
+        - ingress.yaml

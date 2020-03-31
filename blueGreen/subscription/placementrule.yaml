@@ -6,6 +6,6 @@ metadata:
   labels:
     app: nginx-deployment
 spec:
-  #clusterLabels:
-  matchLabels:
-    cloud: Amazon
+  clusterLabels:
+    matchLabels:
+      cloud: Amazon

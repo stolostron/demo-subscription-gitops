@@ -18,6 +18,6 @@ spec:
   - packageName: kustomization
     packageOverrides:
     - value: |
-      resources:
-      - deployment.yaml
-      - service-green.yaml
+        resources:
+        - deployment.yaml
+        - service-green.yaml

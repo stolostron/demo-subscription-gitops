@@ -18,7 +18,7 @@ spec:
   - packageName: kustomization
     packageOverrides:
     - value: |
-      resources:
-      - deployment.yaml
-      - service-blue.yaml
+        resources:
+        - deployment.yaml
+        - service-blue.yaml
 
