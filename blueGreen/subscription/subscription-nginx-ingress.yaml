@@ -19,6 +19,4 @@ spec:
     packageOverrides:
     - value: |-
       resources:
-      - service-blue.yaml
-      - service-green.yaml
       - ingress.yaml
