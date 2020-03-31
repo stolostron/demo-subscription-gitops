@@ -20,4 +20,5 @@ spec:
     - value: |
         resources:
         - deployment.yaml
+        - service-blue.yaml
 

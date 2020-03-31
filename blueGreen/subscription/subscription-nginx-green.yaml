@@ -20,3 +20,4 @@ spec:
     - value: |
         resources:
         - deployment.yaml
+        - service-green.yaml
