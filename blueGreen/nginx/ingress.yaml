@@ -4,13 +4,13 @@ metadata:
   name: nginx-virtual-host-ingress
 spec:
   rules:
-  - host: mynginx.aws1-hive.dev06.red-chesterfield.com
+  - host: mynginx.apps.aws1-hive.dev06.red-chesterfield.com
     http:
       paths:
       - backend:
           serviceName: green-nginx-service
           servicePort: 80
-  - host: blue-mynginx.aws1-hive.dev06.red-chesterfield.com
+  - host: blue-mynginx.apps.aws1-hive.dev06.red-chesterfield.com
     http:
       paths:
       - backend:
