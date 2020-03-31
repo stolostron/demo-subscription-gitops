@@ -7,10 +7,6 @@ metadata:
     stage: green
 spec:
   replicas: 3
-  selector:
-    matchLabels:
-      app: nginx
-      stage: green
   template:
     metadata:
       labels:
