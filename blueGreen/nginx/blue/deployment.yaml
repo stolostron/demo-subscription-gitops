@@ -7,10 +7,10 @@ metadata:
     stage: blue
 spec:
   replicas: 3
-  selector:
-    matchLabels:
-      app: nginx
-      stage: blue
+  #selector:
+  #  matchLabels:
+  #    app: nginx
+  #    stage: blue
   template:
     metadata:
       labels:
