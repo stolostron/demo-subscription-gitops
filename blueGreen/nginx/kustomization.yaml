@@ -1,5 +1,2 @@
 resources:
 - ingress.yaml
-- service-blue.yaml
-#- service-green.yaml
-- deployment.yaml
