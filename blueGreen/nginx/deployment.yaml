@@ -4,18 +4,18 @@ metadata:
   name: blue-nginx-deployment
   labels:
     app: nginx
-    stage: blue
+    stage: green
 spec:
   replicas: 3
   selector:
     matchLabels:
       app: nginx
-      stage: blue
+      stage: green
   template:
     metadata:
       labels:
         app: nginx
-        stage: blue
+        stage: green
     spec:
       containers:
       - name: nginx
