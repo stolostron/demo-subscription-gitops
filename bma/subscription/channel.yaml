@@ -6,6 +6,6 @@ metadata:
   namespace: baremetal-assets
 spec:
   type: GitHub
-  pathname: https://github.com/open-cluster-management/demo-bma-gitops.git
+  pathname: https://github.com/open-cluster-management/demo-subscription-gitops.git
   secretRef:
     name: my-github-secret
