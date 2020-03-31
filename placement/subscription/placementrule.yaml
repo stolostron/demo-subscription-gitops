@@ -9,3 +9,4 @@ spec:
   clusterLabels:
     matchLabels:
       cloud: Amazon
+  #clusterReplicas: 1  #Apply to how many matched clusters, default is ALL
