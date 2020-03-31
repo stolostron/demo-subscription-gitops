@@ -9,7 +9,7 @@ spec:
       paths:
       - backend:
           serviceName: green-nginx-service
-          servicePort: 80
+          servicePort: 8080
   - host: blue-mynginx.apps.aws1-hive.dev06.red-chesterfield.com
     http:
       paths:
