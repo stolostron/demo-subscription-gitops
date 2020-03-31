@@ -4,8 +4,8 @@ metadata:
   name: blue-nginx-subscription
   namespace: nginx
   annotations:
-    apps.open-cluster-management.io/github-path: blueGreen/nginx
-    apps.open-cluster-management.io/github-branch: blue-nginx
+    apps.open-cluster-management.io/github-path: blueGreen/nginx/blue
+    apps.open-cluster-management.io/github-branch: master
   labels:
     app: nginx-deployment
 spec:
@@ -20,5 +20,4 @@ spec:
     - value: |
         resources:
         - deployment.yaml
-        - service-blue.yaml
 

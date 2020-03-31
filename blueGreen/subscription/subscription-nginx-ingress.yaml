@@ -14,9 +14,4 @@ spec:
     placementRef:
       name: nginx-deployment
       kind: PlacementRule
-  packageOverrides:
-  - packageName: blueGreen/nginx/kustomization.yaml
-    packageOverrides:
-    - value: |
-        resources:
-        - ingress.yaml
+
