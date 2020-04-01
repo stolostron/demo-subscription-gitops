@@ -1,4 +1,9 @@
 # Demonstrate placement algorithm
+## Tool Requirements
+- OpenShift CLI Version >= 4.3.0<br>_Needed for kustomize_
+```bash
+oc version
+```
 
 ## This example, allows you to demonstrate moving an application from one cluster to another
 ### Activate a subscription (ONLY RUN ONCE)

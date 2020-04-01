@@ -1,4 +1,9 @@
 # Demonstrate Blue-Green deployment of NGINX via Git Ops
+## Tool Requirements
+- OpenShift CLI Version >= 4.3.0<br>_Needed for kustomize_
+```bash
+oc version
+```
 
 ## This repo is setup to manage the Blue / Green deployment of nginx
 ### Activate a subscription (ONLY RUN ONCE)

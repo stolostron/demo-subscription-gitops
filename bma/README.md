@@ -1,4 +1,9 @@
 # Demonstrate BareMetalAssets via Git Ops
+## Tool Requirements
+- OpenShift CLI Version >= 4.3.0<br>_Needed for kustomize_
+```bash
+oc version
+```
 
 ## This repo is setup to manage your Bare Metal Assets as code
 ### Activate a subscription (ONLY RUN ONCE)

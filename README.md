@@ -1,4 +1,11 @@
 # This repository contains examples of GitOps
+
+## Tool Requirements
+- OpenShift CLI Version >= 4.3.0<br>_Needed for kustomize_
+```bash
+oc version
+```
+
 ## Examples
 
 1. [Bare Metal Assets via gitops](bma/README.md)
