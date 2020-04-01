@@ -1,4 +1,4 @@
-# Demonstrate placement algorith
+# Demonstrate placement algorithm
 
 ## This example, allows you to demonstrate moving an application from one cluster to another
 ### Activate a subscription (ONLY RUN ONCE)
