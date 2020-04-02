@@ -4,7 +4,7 @@ metadata:
   name: blue-nginx-subscription
   namespace: nginx-blue
   annotations:
-    apps.open-cluster-management.io/github-path: blueGreen/nginx/deployement
+    apps.open-cluster-management.io/github-path: blueGreen/nginx/deployment
     apps.open-cluster-management.io/github-branch: blue-nginx
   labels:
     app: nginx-deployment
