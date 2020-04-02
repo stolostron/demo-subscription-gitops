@@ -9,7 +9,7 @@ metadata:
     apps.open-cluster-management.io/github-path: placement/nginx
     apps.open-cluster-management.io/github-branch: master
 spec:
-  channel: demo-gitops/nginx-placement
+  channel: demo/gitops
   placement:
     placementRef:
       name: nginx-placement

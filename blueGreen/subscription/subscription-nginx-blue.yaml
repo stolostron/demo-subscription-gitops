@@ -9,7 +9,7 @@ metadata:
   labels:
     app: nginx-deployment
 spec:
-  channel: demo-gitops/nginx-deployment
+  channel: demo/gitops
   placement:
     placementRef:
       name: nginx-deployment

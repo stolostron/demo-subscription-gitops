@@ -1,0 +1,13 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: policy-subscription
+  namespace: default
+  annotations:
+    apps.open-cluster-management.io/github-path: policy/namespace
+    apps.open-cluster-management.io/github-branch: master
+spec:
+  channel: demo/gitops
+  placement:
+   local: true
+
