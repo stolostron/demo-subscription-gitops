@@ -5,7 +5,6 @@ metadata:
 spec:
   selector:
     app: nginx
-    stage: green 
   ports:
     - name: http
       protocol: TCP

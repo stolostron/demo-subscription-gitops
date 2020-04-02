@@ -6,7 +6,7 @@ metadata:
   labels:
     app: nginx-deployment
   annotations:
-    apps.open-cluster-management.io/github-path: blueGreen/nginx
+    apps.open-cluster-management.io/github-path: blueGreen/nginx/green-ingress
     apps.open-cluster-management.io/github-branch: master
 spec:
   channel: demo/gitops

@@ -1,21 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: green-nginx-deployment
+  name: nginx-deployment
   labels:
     app: nginx
-    stage: green
 spec:
   replicas: 3
   selector:
     matchLabels:
       app: nginx
-      stage: green
   template:
     metadata:
       labels:
         app: nginx
-        stage: green
     spec:
       containers:
       - name: nginx
