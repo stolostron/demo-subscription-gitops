@@ -2,8 +2,8 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
-  name: nginx-deployment
-  namespace: demo-gitops
+  name: gitops
+  namespace: demo
 spec:
   type: GitHub
   pathname: https://github.com/open-cluster-management/demo-subscription-gitops.git

@@ -1,10 +1,23 @@
+---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
   name: nginx-deployment
-  namespace: nginx
+  namespace: nginx-green
   labels:
     app: nginx-deployment
+spec:
+  clusterSelector:
+    matchLabels:
+      cloud: Amazon
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: nginx-deployment
+  namespace: nginx-blue
+labels:
+  app: nginx-deployment
 spec:
   clusterSelector:
     matchLabels:
