@@ -21,7 +21,7 @@ spec:
         kind: Namespace # must have namespace 'prod'
         apiVersion: v1
         metadata:
-          name: prod
+          name: nginx
 ---
 apiVersion: mcm.ibm.com/v1alpha1
 kind: PlacementBinding
