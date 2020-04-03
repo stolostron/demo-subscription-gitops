@@ -1,15 +1,9 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: nginx-virtual-host-ingress
+  name: nginx-virtual-host-ingress-green
 spec:
   rules:
-  - host: mynginx.apps.aws1-hive.dev06.red-chesterfield.com
-    http:
-      paths:
-      - backend:
-          serviceName: green-nginx-service
-          servicePort: 8080
   - host: blue-mynginx.apps.aws1-hive.dev06.red-chesterfield.com
     http:
       paths:
