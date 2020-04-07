@@ -14,4 +14,4 @@ oc version
 4. [GitOps Policy example](policy/README.md)
 
 ### Help
-Reach out to `jpacker@redhat.com` or Slack `@jpacker` in coreos.slack.com for help
+Contact me via GitHub
