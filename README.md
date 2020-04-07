@@ -1,4 +1,4 @@
-# This repository contains examples of GitOps
+# This repository contains Red Hat Advanced Cluster Management examples of GitOps
 
 ## Tool Requirements
 - OpenShift CLI Version >= 4.3.0<br>_Needed for kustomize_
