@@ -1,6 +1,6 @@
 resources:
 - namespace.yaml
-- secret.yaml
+#- secret.yaml
 - channel.yaml
 - placementrule.yaml
 - subscription-nginx-ingress-blue.yaml

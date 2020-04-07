@@ -7,5 +7,5 @@ metadata:
 spec:
   type: GitHub
   pathname: https://github.com/open-cluster-management/demo-subscription-gitops.git
-  secretRef:
-    name: my-github-secret
+  #secretRef:
+  #  name: my-github-secret
