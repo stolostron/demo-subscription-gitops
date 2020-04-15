@@ -2,7 +2,7 @@
 # Rack: 3
 # Chasis: 1  <<< Changed
 # Blade: 1   <<  Changed
-apiVersion: midas.io/v1alpha1
+apiVersion: inventory.open-cluster-management.io/v1alpha1
 kind: BareMetalAsset
 metadata:
   name: dc01r3c1b3-powerflex390
