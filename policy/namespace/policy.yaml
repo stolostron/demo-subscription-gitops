@@ -21,6 +21,6 @@ spec:
         kind: Namespace # must have namespace 'prod'
         apiVersion: v1
         metadata:
-          name: prod
+          name: default
 
 
