@@ -3,9 +3,9 @@ kind: Subscription
 metadata:
   name: bma-subscription
   namespace: default
-annotations:
-  apps.open-cluster-management.io/github-path: bma/BareMetalAssets
-  apps.open-cluster-management.io/github-branch: master
+  annotations:
+    apps.open-cluster-management.io/github-path: bma/BareMetalAssets
+    apps.open-cluster-management.io/github-branch: master
 spec:
   channel: baremetal-assets/datacenter01
   placement:
