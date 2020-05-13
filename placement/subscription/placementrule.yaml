@@ -6,6 +6,8 @@ metadata:
   labels:
     app: nginx-placement
 spec:
+  clusterConditions:
+    - type: OK
   #clusters:
   #- name: gcp1-hive
   clusterSelector:
