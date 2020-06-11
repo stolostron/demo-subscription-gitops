@@ -34,4 +34,4 @@ oc apply -k subscription/
 - The namespace used for the Bare Metal Asset Objects is `default`
 
 ### Help
-Reach out to `jpacker@redhat.com` or Slack `@jpacker` in coreos.slack.com for help
+Reach out to `acm-contact@redhat.com` in coreos.slack.com for help

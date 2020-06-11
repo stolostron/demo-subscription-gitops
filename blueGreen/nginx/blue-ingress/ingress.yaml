@@ -4,7 +4,7 @@ metadata:
   name: nginx-virtual-host-ingress-green
 spec:
   rules:
-  - host: blue-mynginx.apps.aws3-jpacker.dev06.red-chesterfield.com
+  - host: MY_INGRESS_URL
     http:
       paths:
       - backend:

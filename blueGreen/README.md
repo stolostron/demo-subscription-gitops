@@ -10,6 +10,7 @@ oc version
 1. Create a fork the repository and create two branches.
   a. Create two branches, `blue-nginx` and `green-nginx`
   b. Modify `subscription/channel.yaml`, changing the value of `spec.pathname` to that of your fork of this repository
+  c. Update nginx/blue-ingress & nginx/green-ingress, replacing `MY_INGRESS_URL` with a suitable ingress URL
 2. Create the file `subscriptions/secret.yaml`
 ```yaml
 ---
@@ -28,6 +29,7 @@ data:
 ```
 oc apply -k subscription/
 ```
+4. Update the subscription/placementrule.yaml, replacing `MY_LABELS_2MATCH` with the appropriate label(s) from your target cluster.
 ### How it works
 - Three namespaces are created on the hub: `demo` for the channel and `nginx-blue` and `nginx-green` for the subscriptions
 - Four subscriptions are created

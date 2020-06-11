@@ -9,7 +9,7 @@ metadata:
 spec:
   clusterSelector:
     matchLabels:
-      name: aws3-jpacker
+      name: MY_LABELS_2MATCH
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
@@ -21,4 +21,4 @@ labels:
 spec:
   clusterSelector:
     matchLabels:
-      name: aws3-jpacker
+      name: MY_LABELS_2MATCH
