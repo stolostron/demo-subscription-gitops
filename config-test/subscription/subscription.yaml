@@ -1,0 +1,14 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: test-configmap
+  namespace: default
+  annotations:
+    apps.open-cluster-management.io/github-path: config-test/configmap
+    apps.open-cluster-management.io/github-branch: configmap
+  labels:
+    subscription-delete-resources: "false"
+spec:
+  channel: test-ch/test-channel
+  placement:
+    local: true

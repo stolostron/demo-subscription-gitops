@@ -1,0 +1,11 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: test-channel
+  namespace: test-ch 
+spec:
+  type: Git
+  pathname: https://github.com/open-cluster-management/demo-subscription-gitops.git
+  #secretRef:
+  #  name: my-github-secret
