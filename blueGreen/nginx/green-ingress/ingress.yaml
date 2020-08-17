@@ -4,7 +4,7 @@ metadata:
   name: nginx-virtual-host-ingress-green
 spec:
   rules:
-  - host: nginx.apps.jnp455-aws.dev06.red-chesterfield.com
+  - host: nginx.kilo-bravo.demo.red-chesterfield.com
     http:
       paths:
       - backend:
