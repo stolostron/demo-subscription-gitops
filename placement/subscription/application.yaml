@@ -6,11 +6,5 @@
       namespace: nginx
     spec:
       selector:
-        matchExpressions:
-        - key: app
-          operator: In
-          values:
-          - nginx-placement
-      componentKinds:
-      - group: app.ibm.com/v1alpha1
-        kind: Subscription
+        matchLabels:
+          app: nginx-placement
