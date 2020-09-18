@@ -19,3 +19,4 @@ spec:
         image: quay.io/jpacker/nginx:1.16.1
         ports:
         - containerPort: 8080
+        imagePullPolicy: Always
