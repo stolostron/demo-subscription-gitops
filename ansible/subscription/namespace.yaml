@@ -4,8 +4,8 @@ kind: Namespace
 metadata:
   name: demo
 ---
-  apiVersion: v1
-  kind: Namespace
-  metadata:
-    name: nginx-pre-test
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nginx-pre-test
   

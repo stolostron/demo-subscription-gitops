@@ -1,6 +1,0 @@
-resources:
-- namespace.yaml
-- application.yaml
-- channel.yaml
-- placementrule.yaml
-- subscription-nginx-placement.yaml

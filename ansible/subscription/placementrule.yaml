@@ -1,10 +1,10 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: nginx-placement
+  name: nginx-ansible-demo
   namespace: nginx-pre-test
   labels:
-    app: nginx-placement
+    app: nginx-ansible-demo
 spec:
   clusterConditions:
     - type: ManagedClusterConditionAvailable

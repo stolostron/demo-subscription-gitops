@@ -1,10 +1,10 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
 metadata:
-  name: placement-nginx-subscription
+  name: nginx-ansible-demo-subscription
   namespace: nginx-pre-test
   labels:
-    app: nginx-placement
+    app: nginx-ansible-demo
   annotations:
     apps.open-cluster-management.io/github-path: ansible/nginx
     apps.open-cluster-management.io/github-branch: master
@@ -14,6 +14,6 @@ spec:
     name: toweraccess
   placement:
     placementRef:
-      name: nginx-placement
+      name: nginx-ansible-demo
       kind: PlacementRule
 
