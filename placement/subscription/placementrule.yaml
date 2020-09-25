@@ -2,7 +2,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
   name: nginx-placement
-  namespace: nginx
+  namespace: nginx-pre-test
   labels:
     app: nginx-placement
 spec:
@@ -13,5 +13,5 @@ spec:
   #- name: gcp1-hive
   clusterSelector:
     matchLabels:
-      vendor: OpenShift
+      usage: development
   #clusterReplicas: 1  #Apply to how many matched clusters, default is ALL
