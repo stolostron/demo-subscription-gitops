@@ -8,9 +8,6 @@ spec:
   tower_auth_secret: toweraccess
   job_template_name: Service now App Update
   extra_vars:
-    #snow_record variables
-    # 
-    #data variables
     sn_severity: 3
     sn_priority: 3
     appName: nginx-demonstration
