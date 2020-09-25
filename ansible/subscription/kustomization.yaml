@@ -1,5 +1,5 @@
 resources:
-- namespace.yaml
+#- namespace.yaml
 #- secret.yaml
 - channel.yaml
 - placementrule.yaml
