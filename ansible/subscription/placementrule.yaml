@@ -1,0 +1,17 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: nginx-placement
+  namespace: nginx-pre-test
+  labels:
+    app: nginx-placement
+spec:
+  clusterConditions:
+    - type: ManagedClusterConditionAvailable
+      status: "True"
+  #clusters:
+  #- name: gcp1-hive
+  clusterSelector:
+    matchLabels:
+      usage: development
+  #clusterReplicas: 1  #Apply to how many matched clusters, default is ALL
