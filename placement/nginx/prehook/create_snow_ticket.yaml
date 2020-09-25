@@ -3,6 +3,7 @@ apiVersion: tower.ansible.com/v1alpha1
 kind: AnsibleJob
 metadata:
   name: service-now-nginx-demo
+  namespace: nginx-pre-test
 spec:
   tower_auth_secret: toweraccess
   job_template_name: Service now App Update
