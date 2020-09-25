@@ -12,7 +12,6 @@ spec:
   channel: demo/gitops
   hooksecretref:
     name: toweraccess
-    namespace: nginx-pre-test
   placement:
     placementRef:
       name: nginx-placement
