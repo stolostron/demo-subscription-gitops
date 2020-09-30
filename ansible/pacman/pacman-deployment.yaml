@@ -6,6 +6,9 @@ metadata:
   name: pacman
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      name: pacman
   template:
     metadata:
       labels:

@@ -6,6 +6,9 @@ metadata:
   name: mongo
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      name: mongo
   template:
     metadata:
       labels:
@@ -17,10 +20,10 @@ spec:
         ports:
         - name: mongo
           containerPort: 27017
-        #volumeMounts:
-        #  - name: mongo-db
-        #    mountPath: /data/db
-      #volumes:
-      #  - name: mongo-db
-      #    persistentVolumeClaim:
-      #      claimName: mongo-storage
+        volumeMounts:
+          - name: mongo-db
+            mountPath: /data/db
+      volumes:
+        - name: mongo-db
+          persistentVolumeClaim:
+            claimName: mongo-storage
