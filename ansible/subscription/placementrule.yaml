@@ -1,17 +1,23 @@
+---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: nginx-ansible-demo
-  namespace: nginx-pre-test
   labels:
-    app: nginx-ansible-demo
+    app: pacman-ansible-demo
+  name: pacman-ansible-demo-placement-0
+  namespace: pacman
 spec:
+  clusterSelector:
+    clusterReplicas: 2
+    matchExpressions:
+    - key: region
+      operator: In
+      values:
+      - us-east-1
+      - centralus
+      - europe-west3
+  #  matchLabels:
+  #    'cloud': 'Google'
   clusterConditions:
     - type: ManagedClusterConditionAvailable
       status: "True"
-  #clusters:
-  #- name: gcp1-hive
-  clusterSelector:
-    matchLabels:
-      usage: development
-  #clusterReplicas: 1  #Apply to how many matched clusters, default is ALL

@@ -1,10 +1,17 @@
 ---
-    apiVersion: app.k8s.io/v1beta1
-    kind: Application
-    metadata:
-      name: nginx-ansible-demo
-      namespace: nginx-pre-test
-    spec:
-      selector:
-        matchLabels:
-          app: nginx-ansible-demo
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: pacman-ansible-demo
+  namespace: pacman
+spec:
+  componentKinds:
+  - group: apps.open-cluster-management.io
+    kind: Subscription
+  descriptor: {}
+  selector:
+    matchExpressions:
+      - key: app
+        operator: In
+        values: 
+          - pacman-ansible-demo

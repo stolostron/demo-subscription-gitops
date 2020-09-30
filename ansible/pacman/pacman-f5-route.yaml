@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/name: f5-gslb-pacman
 spec:
   # Added for f5 demonstration
-  host: pacman.www-apps.juliet.demo.red-chesterfield.com
+  host: pacman.www-apps.jnphub01.demo.red-chesterfield.com
   path: "/"
   to:
     kind: Service
