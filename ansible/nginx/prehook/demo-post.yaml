@@ -1,8 +1,0 @@
----
-apiVersion: tower.ansible.com/v1alpha1
-kind: AnsibleJob
-metadata:
-    name: prehook-f5-gslb-test
-spec:
-    job_template_name: demo-f5-gslb
-    tower_auth_secret: toweraccess
