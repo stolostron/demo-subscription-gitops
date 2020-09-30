@@ -14,5 +14,6 @@ spec:
       BASE_GCP_DOMAIN: demo.gcp.red-chesterfield.com
       BASE_AZ_DOMAIN: az.dev06.red-chesterfield.com
       APP_NAME: nginx
+      PROJECT_NAME: nginx-pre-test
 
     
