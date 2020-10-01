@@ -1,6 +1,4 @@
 resources:
-#- namespace.yaml
-#- secret.yaml
 - channel.yaml
 - placementrule.yaml
 - subscription-nginx-placement.yaml

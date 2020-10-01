@@ -10,7 +10,7 @@ metadata:
   name: book-import-subscription-0
   namespace: book-import
 spec:
-    channel: book-import-demo-subscription-gitops-chn-ns-0/book-import-demo-subscription-gitops-chn-0
+    channel: demo/gitops
     placement:
       placementRef:
         kind: PlacementRule

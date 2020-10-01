@@ -1,10 +1,16 @@
 ---
+apiVersion: v1
+kind: Namespace
+metadata:
+    name: demo
+---
 apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
-    name: book-import-demo-subscription-gitops-chn-0
-    namespace: book-import-demo-subscription-gitops-chn-ns-0
+    name: gitops
+    namespace: demo
 spec:
-    type: Git
-    pathname: 'https://github.com/open-cluster-management/demo-subscription-gitops.git'
-    
+    type: GitHub
+    pathname: https://github.com/open-cluster-management/demo-subscription-gitops.git
+    #secretRef:
+    #  name: my-github-secret
