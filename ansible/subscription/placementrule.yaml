@@ -7,8 +7,8 @@ metadata:
   name: pacman-ansible-demo-placement-0
   namespace: pacman
 spec:
+  clusterReplicas: 2
   clusterSelector:
-    clusterReplicas: 2
     matchExpressions:
     - key: region
       operator: In
