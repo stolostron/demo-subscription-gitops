@@ -5,4 +5,4 @@ resources:
 - pacman-deployment.yaml
 - pacman-service.yaml
 - pacman-route.yaml
-- pcaman-f5-route.yaml
+- pacman-f5-route.yaml
