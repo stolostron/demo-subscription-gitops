@@ -14,8 +14,8 @@ spec:
       operator: In
       values:
       - us-east-1
-      - centralus
       - europe-west3
+      - centralus
   #  matchLabels:
   #    'cloud': 'Google'
   clusterConditions:
