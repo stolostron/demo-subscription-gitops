@@ -9,3 +9,6 @@ spec:
   to:
     kind: Service
     name: book-import
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
