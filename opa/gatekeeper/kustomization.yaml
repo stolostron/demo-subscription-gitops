@@ -1,6 +1,7 @@
 resources:
 - gatekeeper-scc.yaml
 - namespace.yaml
+- service.yaml
 - crds.yaml
 - roles.yaml
 - deployment.yaml
