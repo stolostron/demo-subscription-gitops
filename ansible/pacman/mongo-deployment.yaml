@@ -27,12 +27,3 @@ spec:
         - name: mongo-db
           persistentVolumeClaim:
             claimName: mongo-storage
-  volumeClaimTemplates:
-  - metadata:
-      name: mongo-storage
-    spec:
-      accessModes:
-        - ReadWriteOnce
-      resources:
-        requests:
-          storage: 8Gi
