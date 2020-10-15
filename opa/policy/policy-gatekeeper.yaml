@@ -2,7 +2,7 @@ apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
   name: policy-gatekeeper
-  namespace: default
+  namespace: gatekeeper-system
   annotations:
     policy.open-cluster-management.io/standards: 
     policy.open-cluster-management.io/categories: 
@@ -104,7 +104,7 @@ apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
 metadata:
   name: binding-policy-gatekeeper
-  namespace: default
+  namespace: gatekeeper-system
 placementRef:
   name: placement-policy-gatekeeper
   kind: PlacementRule
@@ -118,7 +118,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
   name: placement-policy-gatekeeper
-  namespace: default
+  namespace: gatekeeper-system
 spec:
   clusterConditions:
   - status: "True"
