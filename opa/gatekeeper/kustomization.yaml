@@ -4,5 +4,6 @@ resources:
 - service.yaml
 - crds.yaml
 - roles.yaml
+- secrets.yaml
 - deployment.yaml
 - webhook.yaml
