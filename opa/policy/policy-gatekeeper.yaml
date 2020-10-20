@@ -106,25 +106,10 @@ metadata:
   name: binding-policy-gatekeeper
   namespace: gatekeeper-system
 placementRef:
-  name: placement-policy-gatekeeper
+  name: opa-gatekeeper-placement-0
   kind: PlacementRule
   apiGroup: apps.open-cluster-management.io
 subjects:
 - name: policy-gatekeeper
   kind: Policy
   apiGroup: policy.open-cluster-management.io
----
-apiVersion: apps.open-cluster-management.io/v1
-kind: PlacementRule
-metadata:
-  name: placement-policy-gatekeeper
-  namespace: gatekeeper-system
-spec:
-  clusterConditions:
-  - status: "True"
-    type: ManagedClusterConditionAvailable
-  clusterSelector:
-    #matchExpressions:
-    #  []  # selects all clusters if not specified
-    matchLabels:
-      name: blank
