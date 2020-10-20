@@ -1,5 +1,5 @@
 resources:
-- mongo-pvc.yaml
+#- mongo-pvc.yaml
 - mongo-deployment.yaml
 - mongo-service.yaml
 - pacman-deployment.yaml
