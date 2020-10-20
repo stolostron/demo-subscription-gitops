@@ -2,7 +2,7 @@ resources:
 #- mongo-pvc.yaml
 - mongo-deployment.yaml
 - mongo-service.yaml
-- pacman-deployment.yaml
+#- pacman-deployment.yaml
 - pacman-service.yaml
 - pacman-route.yaml
 - pacman-f5-route.yaml
