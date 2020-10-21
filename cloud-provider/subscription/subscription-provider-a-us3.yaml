@@ -1,0 +1,25 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: cloud-amazon-us-west-3
+  namespace: provider
+  annotations:
+    apps.open-cluster-management.io/github-path: cloud-provider/nginx
+    apps.open-cluster-management.io/github-branch: cloud-provider
+  labels:
+    app: cloud
+spec:
+  channel: demo/gitops
+  placement:
+    placementRef:
+      name: cloud-provider-a-us3
+      kind: PlacementRule
+  packageOverrides:
+  - packageName: kustomization
+    packageOverrides:
+    - value: |
+        namespace: provider
+        resources:
+        - service.yaml
+        - deployment-a-us3.yaml
+
