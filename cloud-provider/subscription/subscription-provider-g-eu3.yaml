@@ -15,7 +15,7 @@ spec:
       name: cloud-provider-g-eu3
       kind: PlacementRule
   packageOverrides:
-  - packageName: kustomization
+  - packageName: cloud-provider/nginx/kustomization
     packageOverrides:
     - value: |
         namespace: provider
