@@ -15,9 +15,9 @@ spec:
       name: cloud-provider-a-us2
       kind: PlacementRule
   packageOverrides:
-  - packageName: cloud-provider/nginx/kustomization
+  - packageName: kustomization
     packageOverrides:
-    - value: |
+    - value:
         namespace: provider
         resources:
         - service.yaml
