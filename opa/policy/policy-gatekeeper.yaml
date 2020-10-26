@@ -8,7 +8,7 @@ metadata:
     policy.open-cluster-management.io/categories: 
     policy.open-cluster-management.io/controls: 
 spec:
-  disabled: false
+  disabled: true
   policy-templates:
     - objectDefinition:
         apiVersion: policy.open-cluster-management.io/v1
