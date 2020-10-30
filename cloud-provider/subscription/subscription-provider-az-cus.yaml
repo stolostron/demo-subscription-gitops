@@ -5,7 +5,7 @@ metadata:
   namespace: provider
   annotations:
     apps.open-cluster-management.io/github-path: cloud-provider/nginx
-    apps.open-cluster-management.io/github-branch: cloud-provider
+    apps.open-cluster-management.io/github-branch: master
   labels:
     app: cloud
 spec:
@@ -17,7 +17,7 @@ spec:
   packageOverrides:
   - packageName: kustomization
     packageOverrides:
-    - value: |
+    - value:
         namespace: provider
         resources:
         - service.yaml
