@@ -1,0 +1,13 @@
+apiVersion: tower.ansible.com/v1alpha1
+kind: AnsibleJob
+metadata:
+  name: snow-keepalive
+spec:
+  extra_vars:
+    appName: snow-keepalive-job
+    sn_priority: 3
+    sn_severity: 3
+    target_clusters:
+    - acm-hub
+  job_template_name: Service now App Update
+  tower_auth_secret: tower
