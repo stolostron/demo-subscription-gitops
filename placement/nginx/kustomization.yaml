@@ -1,4 +1,5 @@
 resources:
 - service.yaml
 - deployment.yaml
-- route.yaml
+#- route.yaml
+- ingress.yaml
