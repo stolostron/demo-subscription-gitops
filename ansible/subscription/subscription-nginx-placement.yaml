@@ -12,7 +12,7 @@ metadata:
 spec:
   hooksecretref: 
     name: toweraccess
-  channel: nginx-ansible-demo-demo-subscription-gitops-chn-ns-0/nginx-ansible-demo-demo-subscription-gitops-chn-0
+  channel: demo/gitops
   placement:
     placementRef:
       kind: PlacementRule
