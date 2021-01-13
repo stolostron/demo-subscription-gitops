@@ -6,6 +6,6 @@ metadata:
   namespace: demo
 spec:
   type: GitHub
-  pathname: https://github.com/open-cluster-management/demo-subscription-gitops.git
+  pathname: https://github.com/funkytaco/demo-subscription-gitops.git
   #secretRef:
   #  name: my-github-secret

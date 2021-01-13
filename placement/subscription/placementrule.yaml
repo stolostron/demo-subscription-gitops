@@ -13,4 +13,5 @@ spec:
   clusterSelector:
     matchLabels:
       vendor: OpenShift
+      app: nginx-placement
   #clusterReplicas: 1  #Apply to how many matched clusters, default is ALL
