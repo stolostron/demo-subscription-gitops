@@ -1,0 +1,39 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: jnp-test
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  #name: CLUSTER_NAME
+  name: cluster-config
+  namespace: jnp-test
+  labels:
+    open-cluster-management: curator
+data:
+  providerCredentialPath: default/aws4jnp
+  overrideJob: |-
+    apiVersion: batch/v1
+    kind: Job
+    metadata:
+      GenerateName: curator-job-
+    spec:
+      backoffLimit: 0
+      template:
+        spec:
+          serviceAccountName: cluster-installer
+          initContainers:
+          - name: apply-secrets
+            image: quay.io/jpacker/clustercurator-job:0.5
+            command: ['./curator','applycloudprovider-aws']
+            env:
+            - name: PROVIDER_CREDENTIAL_PATH
+              value: default/aws4jnp
+          containers:
+          - name: complete
+            image: quay.io/jpacker/clustercurator-job:0.5
+            imagePullPolicy: Always
+            command: ['echo','Done!']
+          restartPolicy: Never

@@ -1,0 +1,13 @@
+---
+apiVersion: tower.ansible.com/v1alpha1
+kind: AnsibleJob
+metadata:
+  name: service-now-ticket-demo
+  namespace: jnp-test
+spec:
+  tower_auth_secret: toweraccess
+  job_template_name: Service now create cluster
+  extra_vars:
+    sn_severity: 2
+    sn_priority: 2
+    action: created
