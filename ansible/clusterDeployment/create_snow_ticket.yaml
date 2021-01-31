@@ -10,4 +10,4 @@ spec:
   extra_vars:
     sn_severity: 2
     sn_priority: 2
-    action: created
+    action: "create initiated"
