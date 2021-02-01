@@ -2,14 +2,14 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: jnp-test
+  name: jnp-gitops
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   #name: CLUSTER_NAME
   name: cluster-config
-  namespace: jnp-test
+  namespace: jnp-gitops
   labels:
     open-cluster-management: curator
 data:
@@ -35,5 +35,141 @@ data:
           - name: complete
             image: quay.io/jpacker/clustercurator-job:0.5
             imagePullPolicy: Always
-            command: ['echo','Done!']
+            command: ['echo','Done!./awsjob create']
           restartPolicy: Never
+
+---
+apiVersion: hive.openshift.io/v1
+kind: ClusterDeployment
+metadata:
+  name: jnp-gitops
+  namespace: jnp-gitops
+  labels:
+    cloud: 'AWS'
+    region: 'us-east-1'
+    vendor: 'OpenShift'
+spec:
+  baseDomain: dev06.red-chesterfield.com
+  clusterName: jnp-gitops
+  controlPlaneConfig:
+    servingCertificates: {}
+  installAttemptsLimit: 2
+  installed: false
+  platform:
+    aws:
+      credentialsSecretRef:
+        name: jnp-gitops-creds
+      region: us-east-1
+  provisioning:
+    installConfigSecretRef:
+      name: jnp-gitops-install-config
+    sshPrivateKeySecretRef:
+      name: jnp-gitops-ssh-private-key
+    imageSetRef:
+       #quay.io/openshift-release-dev/ocp-release:4.6.12-x86_64
+      name: img4.6.13-x86-64-appsub
+  pullSecretRef:
+    name: jnp-gitops-pull-secret
+---
+apiVersion: cluster.open-cluster-management.io/v1
+kind: ManagedCluster
+metadata:
+  labels:
+    cloud: Amazon
+    region: us-east-1
+    name: jnp-gitops
+    vendor: OpenShift
+  name: jnp-gitops
+  namespace: jnp-gitops
+spec:
+  hubAcceptsClient: true
+---
+apiVersion: hive.openshift.io/v1
+kind: MachinePool
+metadata:
+  name: jnp-gitops-worker
+  namespace: jnp-gitops
+spec:
+  clusterDeploymentRef:
+    name: jnp-gitops
+  name: worker
+  platform:
+    aws:
+      rootVolume:
+        iops: 100
+        size: 100
+        type: gp2
+      type: m5.xlarge
+  replicas: 3
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: jnp-gitops-install-config
+  namespace: jnp-gitops
+type: Opaque
+stringData:
+  install-config.yaml: |-
+    apiVersion: v1
+    metadata:
+      name: jnp-gitops-install-config
+      namespace: jnp-gitops
+    baseDomain: dev06.red-chesterfield.com
+    controlPlane:
+      hyperthreading: Enabled
+      name: master
+      replicas: 3
+      platform:
+        aws:
+          rootVolume:
+            iops: 4000
+            size: 100
+            type: io1
+          type: m5.xlarge
+    compute:
+    - hyperthreading: Enabled
+      name: worker
+      replicas: 3
+      platform:
+        aws:
+          rootVolume:
+            iops: 2000
+            size: 100
+            type: io1
+          type: m5.xlarge
+    networking:
+      clusterNetwork:
+      - cidr: 10.128.0.0/14
+        hostPrefix: 23
+      machineCIDR: 10.0.0.0/16
+      networkType: OpenShiftSDN
+      serviceNetwork:
+      - 172.30.0.0/16
+    platform:
+      aws:
+        region: us-east-1
+    pullSecret: "" # skip, hive will inject based on it's Cloud Provider Secret
+    sshKey: ""     # skip, hive will inject based on it's Cloud Provider Secret
+---
+apiVersion: agent.open-cluster-management.io/v1
+kind: KlusterletAddonConfig
+metadata:
+  name: jnp-gitops
+  namespace: jnp-gitops
+spec:
+  clusterName: jnp-gitops
+  clusterNamespace: jnp-gitops
+  clusterLabels:
+    cloud: Amazon
+    vendor: OpenShift
+  applicationManager:
+    enabled: true
+  policyController:
+    enabled: true
+  searchCollector:
+    enabled: true
+  certPolicyController:
+    enabled: true
+  iamPolicyController:
+    enabled: true
+  version: 2.1.0
