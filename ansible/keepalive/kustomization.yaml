@@ -1,0 +1,3 @@
+resources:
+- ansiblejob.yaml
+- snow-keepalive-cronjob.yaml
